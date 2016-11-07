@@ -293,7 +293,7 @@ imap_send_login_info(XfceMailwatchIMAPMailbox *imailbox,
         g_snprintf(buf, BUFSIZE, "%05d AUTHENTICATE CRAM-MD5\r\n",
                    ++imailbox->imap_tag);
         bout = imap_send(imailbox, net_conn, buf);
-        if(bout != strlen(buf))
+        if(bout != (gint)strlen(buf))
             goto cleanuperr;
         
         bin = imap_recv(imailbox, net_conn, buf, BUFSIZE);
@@ -320,7 +320,7 @@ imap_send_login_info(XfceMailwatchIMAPMailbox *imailbox,
             g_free(response_base64);
             bout = imap_send(imailbox, net_conn, buf);
             DBG("sent CRAM-MD5 response: %s\n", buf);
-            if(bout != strlen(buf))
+            if(bout != (gint)strlen(buf))
                 goto cleanuperr;
 
             bin = imap_recv_command(imailbox, net_conn, buf, BUFSIZE);
@@ -711,7 +711,12 @@ imap_mailbox_new(XfceMailwatch *mailwatch, XfceMailwatchMailboxType *type)
     imailbox->mailwatch = mailwatch;
     imailbox->timeout = XFCE_MAILWATCH_DEFAULT_TIMEOUT;
     imailbox->use_standard_port = TRUE;
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    imailbox->config_mx = g_malloc(sizeof(GMutex));
+    g_mutex_init(imailbox->config_mx);
+#else
     imailbox->config_mx = g_mutex_new();
+#endif
 
     /* this is a bit of a hack; should really fetch the folder list and
      * try to find the inbox, as the inbox might not be named "INBOX" */
@@ -736,7 +741,13 @@ imap_check_mail_timeout(gpointer data)
         return TRUE;
     }
 
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    /* Name must be 16 chars (inc nul) or less */
+    th = g_thread_new("imap_check_mail", imap_check_mail_th, imailbox);
+    g_thread_unref(th); /* Release ref in this thread */
+#else
     th = g_thread_create(imap_check_mail_th, imailbox, FALSE, NULL);
+#endif
     g_atomic_pointer_set(&imailbox->th, th);
 
     return TRUE;
@@ -1292,8 +1303,13 @@ imap_config_refresh_btn_clicked_cb(GtkWidget *w, gpointer user_data)
                 "style-set", TRUE, NULL);
 
     g_atomic_int_set(&imailbox->folder_tree_running, TRUE);
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    th = g_thread_new("imap_pop_tree", imap_populate_folder_tree_th, imailbox);
+    g_thread_unref(th);
+#else
     th = g_thread_create(imap_populate_folder_tree_th,
                          imailbox, FALSE, NULL);
+#endif
     g_atomic_pointer_set(&imailbox->folder_tree_th, th);
 }
 
@@ -1500,8 +1516,13 @@ imap_config_newmailfolders_btn_clicked_cb(GtkWidget *w, gpointer user_data)
     gtk_widget_set_sensitive(btn, FALSE);
 
     g_atomic_int_set(&imailbox->folder_tree_running, TRUE);
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    th = g_thread_new("imap_pop_tree", imap_populate_folder_tree_th, imailbox);
+    g_thread_unref(th);
+#else
     th = g_thread_create(imap_populate_folder_tree_th,
                          imailbox, FALSE, NULL);
+#endif
     g_atomic_pointer_set(&imailbox->folder_tree_th, th);
     
     gtk_dialog_run(GTK_DIALOG(dlg));
@@ -1946,7 +1967,12 @@ imap_mailbox_free(XfceMailwatchMailbox *mailbox)
     while(g_atomic_pointer_get(&imailbox->th))
         g_thread_yield();
     
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    g_mutex_clear(imailbox->config_mx);
+    g_free(imailbox->config_mx);
+#else
     g_mutex_free(imailbox->config_mx);
+#endif
     
     g_free(imailbox->host);
     g_free(imailbox->username);

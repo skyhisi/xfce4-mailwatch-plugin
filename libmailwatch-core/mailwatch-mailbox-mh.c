@@ -488,7 +488,12 @@ mh_check_mail_timeout(gpointer data)
         return TRUE;
     }
 
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    th = g_thread_new("mh_main", mh_main_thread, mh);
+    g_thread_unref(th);
+#else
     th = g_thread_create( mh_main_thread, mh, FALSE, NULL );
+#endif
     g_atomic_pointer_set( &mh->thread, th );
 
     return TRUE;

@@ -179,8 +179,12 @@ maildir_check_mail_timeout( gpointer data )
                                     _( "Previous thread hasn't exited yet, not checking mail this time." ) );
         return TRUE;
     }
-
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    th = g_thread_new("maildir_main", maildir_main_thread, maildir);
+    g_thread_unref(th);
+#else
     th = g_thread_create( maildir_main_thread, maildir, FALSE, NULL );
+#endif
     g_atomic_pointer_set( &maildir->thread, th );
 
     return TRUE;
@@ -198,7 +202,12 @@ maildir_new( XfceMailwatch *mailwatch, XfceMailwatchMailboxType *type )
     maildir->mailwatch      = mailwatch;
     maildir->path           = NULL;
     maildir->interval       = XFCE_MAILWATCH_DEFAULT_TIMEOUT;
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    maildir->mutex          = g_malloc(sizeof(GMutex));
+    g_mutex_init(maildir->mutex);
+#else
     maildir->mutex          = g_mutex_new();
+#endif
     
     return ( (XfceMailwatchMailbox *) maildir );
 }
@@ -440,6 +449,14 @@ maildir_free( XfceMailwatchMailbox *mailbox )
     if ( maildir->path ) {
         g_free( maildir->path );
     }
+    
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    g_mutex_clear(maildir->mutex);
+    g_free(maildir->mutex);
+#else
+    g_mutex_free(maildir->mutex);
+#endif
+    
     g_free( maildir );
 
     DBG( "<<--" );

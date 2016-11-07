@@ -263,7 +263,7 @@ mailwatch_log_message_cb(XfceMailwatch *mailwatch,
     gchar time_str[256] = "", *new_message = NULL;
     
     if (localtime_r(&entry->timestamp, &ltm))
-        strftime(time_str, 256, "%x %T:", &ltm);
+        strftime(time_str, 256, "%Y-%m-%d %T:", &ltm);
     
     if (entry->level >= XFCE_MAILWATCH_N_LOG_LEVELS)
         entry->level = XFCE_MAILWATCH_N_LOG_LEVELS - 1;
@@ -1026,6 +1026,12 @@ mailwatch_create_options(XfcePanelPlugin     *plugin,
               *vbox, *img;
     GtkContainer *cfg_page;
     GtkSizeGroup *sg;
+
+    GtkWidget *table;
+    GtkWidget *lbl_onclick;
+    GtkWidget *lbl_onnewmessages;
+    GtkWidget *lbl_count_changed_command;
+    GtkWidget *halign;
     
     xfce_panel_plugin_block_menu(plugin);
     
@@ -1065,11 +1071,6 @@ mailwatch_create_options(XfcePanelPlugin     *plugin,
     if(cfg_page)
         gtk_box_pack_start(GTK_BOX(topvbox), GTK_WIDGET(cfg_page), TRUE, TRUE, 0);
     /* External programs. */
-    GtkWidget *table;
-    GtkWidget *lbl_onclick;
-    GtkWidget *lbl_onnewmessages;
-    GtkWidget *lbl_count_changed_command;
-    GtkWidget *halign;
 
     frame = xfce_gtk_frame_box_new(_("External Programs"), &frame_bin);
     gtk_box_pack_start(GTK_BOX(topvbox), frame, FALSE, FALSE, 0);

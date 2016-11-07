@@ -190,7 +190,7 @@ pop3_send_login_info(XfceMailwatchPOP3Mailbox *pmailbox, const gchar *username,
     /* see if CRAM-MD5 is supported */
     g_strlcpy(buf, "CAPA\r\n", BUFSIZE);
     bout = pop3_send(pmailbox, buf);
-    if(bout != strlen(buf))
+    if(bout != (gint)strlen(buf))
         return FALSE;
 
     bin = pop3_recv_command(pmailbox, buf, BUFSIZE, TRUE);
@@ -203,7 +203,7 @@ pop3_send_login_info(XfceMailwatchPOP3Mailbox *pmailbox, const gchar *username,
         /* server supports CRAM-MD5 */
         g_strlcpy(buf, "AUTH CRAM-MD5\r\n", BUFSIZE);
         bout = pop3_send(pmailbox, buf);
-        if(bout != strlen(buf))
+        if(bout != (gint)strlen(buf))
             return FALSE;
 
         bin = pop3_recv(pmailbox, buf, BUFSIZE);
@@ -229,7 +229,7 @@ pop3_send_login_info(XfceMailwatchPOP3Mailbox *pmailbox, const gchar *username,
             g_strlcat(buf, "\r\n", BUFSIZE);
             g_free(response_base64);
             bout = pop3_send(pmailbox, buf);
-            if(bout != strlen(buf))
+            if(bout != (gint)strlen(buf))
                 return FALSE;
 
             bin = pop3_recv_command(pmailbox, buf, BUFSIZE, FALSE);
@@ -528,7 +528,12 @@ pop3_mailbox_new(XfceMailwatch *mailwatch, XfceMailwatchMailboxType *type)
     pmailbox->mailwatch = mailwatch;
     pmailbox->timeout = XFCE_MAILWATCH_DEFAULT_TIMEOUT;
     pmailbox->use_standard_port = TRUE;
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    pmailbox->config_mx = g_malloc(sizeof(GMutex));
+    g_mutex_init(pmailbox->config_mx);
+#else
     pmailbox->config_mx = g_mutex_new();
+#endif
 
     xfce_mailwatch_net_conn_init();
     
@@ -549,7 +554,12 @@ pop3_check_mail_timeout(gpointer data)
         return TRUE;
     }
 
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    new_th = g_thread_new("pop3_check", pop3_check_mail_th, pmailbox);
+    g_thread_unref(new_th);
+#else
     new_th = g_thread_create(pop3_check_mail_th, pmailbox, FALSE, NULL);
+#endif
     g_atomic_pointer_set(&pmailbox->th, new_th);
 
     return TRUE;
@@ -1023,7 +1033,12 @@ pop3_mailbox_free(XfceMailwatchMailbox *mailbox)
     while(g_atomic_pointer_get(&pmailbox->th))
         g_thread_yield();
     
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    g_mutex_clear(pmailbox->config_mx);
+    g_free(pmailbox->config_mx);
+#else
     g_mutex_free(pmailbox->config_mx);
+#endif
     
     g_free(pmailbox->host);
     g_free(pmailbox->username);

@@ -226,7 +226,12 @@ mbox_check_mail_timeout( gpointer data )
         return TRUE;
     }
 
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    th = g_thread_new("mbox_check_mail", mbox_check_mail_thread, mbox);
+    g_thread_unref(th);
+#else
     th = g_thread_create( mbox_check_mail_thread, mbox, FALSE, NULL );
+#endif
     g_atomic_pointer_set( &mbox->thread, th );
 
     return TRUE;
@@ -241,7 +246,12 @@ mbox_new( XfceMailwatch *mailwatch, XfceMailwatchMailboxType *type )
 
     mbox->mailwatch     = mailwatch;
 
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    mbox->settings_mutex = g_malloc(sizeof(GMutex));
+    g_mutex_init(mbox->settings_mutex);
+#else
     mbox->settings_mutex = g_mutex_new();
+#endif
     mbox->interval = XFCE_MAILWATCH_DEFAULT_TIMEOUT;
 
     return ( (XfceMailwatchMailbox *) mbox );
@@ -462,8 +472,13 @@ mbox_free( XfceMailwatchMailbox *mailbox )
     mbox_activate( mailbox, FALSE );
     while( g_atomic_pointer_get( &mbox->thread ) )
         g_thread_yield();
-    
-    g_mutex_free( mbox->settings_mutex );
+
+#if (GLIB_CHECK_VERSION (2, 32, 0))
+    g_mutex_clear(mbox->settings_mutex);
+    g_free(mbox->settings_mutex);
+#else
+    g_mutex_free(mbox->settings_mutex);
+#endif
 
     if ( mbox->fn ) {
         g_free( mbox->fn );
