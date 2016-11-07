@@ -554,7 +554,7 @@ imap_check_mailbox(XfceMailwatchIMAPMailbox *imailbox,
     TRACE("entering, folder %s", mailbox_name);
     
     /* ask the server to look at the mailbox */
-    g_snprintf(buf, sizeof(buf), "%05d STATUS %s (UNSEEN)\r\n",
+    g_snprintf(buf, sizeof(buf), "%05d STATUS \"%s\" (UNSEEN)\r\n",
                ++imailbox->imap_tag, mailbox_name);
 
     if(imap_send(imailbox, net_conn, buf) != (gint)strlen(buf))
