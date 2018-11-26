@@ -3,35 +3,36 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Masato HASHIMOTO <cabezon.hashimoto@gmail.com>, 2013
-# Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008,2016
+# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
+# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# Zmicer Turok <zmicerturok@gmail.com >, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 18:31+0200\n"
-"PO-Revision-Date: 2017-09-23 19:02+0000\n"
-"Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
-"Language-Team: Japanese (http://www.transifex.com/xfce/xfce-panel-plugins/language/ja/)\n"
+"PO-Revision-Date: 2018-06-23 18:26+0000\n"
+"Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: be\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:204
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:399
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:308
 #, c-format
 msgid "TLS handshake failed: %s"
-msgstr "TLS ハンドシェイクに失敗しました: %s"
+msgstr "Не атрымалася злучыцца з TLS: %s"
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:255
 #, c-format
 msgid ""
 "Received HTTP response code %d.  The most likely reason for this is that "
 "your GMail username or password is incorrect."
-msgstr "HTTP 応答コード %d を受信しました。あなたの GMail ユーザー名またはパスワードが誤っていることが原因と思われます。"
+msgstr "Атрыманы код HTTP %d. Хутчэй за ўсё вы ўвялі хібныя лагін і пароль ад GMail."
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:261
 #, c-format
@@ -39,7 +40,7 @@ msgid ""
 "Received HTTP response code %d, which should be 200.  There may be a problem"
 " with GMail's servers, or they have incompatibly changed their "
 "authentication method or location of the new messages feed."
-msgstr "HTTP 応答コードが 200 になるはずですが、%d を受信しました。GMail サーバーに問題がある、認証方式を互換性のないものに変更している、あるいは新着メッセージを受信する場所を変更している可能性があります。"
+msgstr "Атрымана памылка ад HTTP %d, якая падобная на памылку 200. Гэта можа быць звязана з памылкамі на серверы Gmail, альбо метад аўтарызацыі быў зменены."
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:394
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:735
@@ -48,25 +49,25 @@ msgstr "HTTP 応答コードが 200 になるはずですが、%d を受信し�
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:487
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:548
 msgid "Previous thread hasn't exited yet, not checking mail this time."
-msgstr "以前のスレッドがまだ終了されていないため、今回はメールをチェックしません。"
+msgstr "Папярэдняе злучэнне яшчэ актыўна. Вы не можаце праверыць пошту."
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:535
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1723
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:863
 msgid "_Username:"
-msgstr "ユーザー名(_U):"
+msgstr "_Карыстальнік:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:555
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1743
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:883
 msgid "_Password:"
-msgstr "パスワード(_P):"
+msgstr "_Пароль:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:576
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1782
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:915
 msgid "Check for _new messages every"
-msgstr "新着メッセージを(_N)"
+msgstr "Правяраць на наяўнасць _новых лістоў кожныя"
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:591
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1796
@@ -75,23 +76,23 @@ msgstr "新着メッセージを(_N)"
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:605
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:929
 msgid "minute(s)."
-msgstr "分毎に確認する"
+msgstr "хвілін(ы)."
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:668
 msgid "Remote GMail Mailbox"
-msgstr "リモート GMail メールボックス"
+msgstr "Адлеглая паштовая скрыня GMail"
 
 #: ../libmailwatch-core/mailwatch-mailbox-gmail.c:669
 msgid ""
 "The GMail plugin can connect to Google's mail service and securely retrieve "
 "the number of new messages."
-msgstr "GMail プラグインは、Google が提供しているメールサービスに接続し、新着メッセージを安全に取得します。"
+msgstr "Убудова GMail можа злучацца з паштовым серверам Google і атрымоўваць спіс новых лістоў."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:286
 msgid ""
 "Secure IMAP is not available, and the IMAP server does not support plaintext"
 " logins."
-msgstr "安全な IMAP が利用できません。また IMAP サーバーは平文でのログインに対応しません。"
+msgstr "Зашыфраваны IMAP не падтрымліваецца, таксама сервер не падтрымлівае аўтэнтыфікацыю простым тэкстам."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:337
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:370
@@ -99,106 +100,106 @@ msgstr "安全な IMAP が利用できません。また IMAP サーバーは平
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:284
 msgid ""
 "Authentication failed.  Perhaps your username or password is incorrect?"
-msgstr "認証は失敗しました。ユーザー名かパスワードが間違ってませんか?"
+msgstr "Не атрымалася ўпаўнаважыцца. Праверце лагін і пароль."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:433
 msgid "STARTTLS security was requested, but this server does not support it."
-msgstr "STARTTLS セキュリティがリクエストされましたが、このサーバーはサポートしていません。"
+msgstr "Сервер не падтрымлівае STARTTLS."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1144
 msgid "Failed to get folder list"
-msgstr "フォルダーリストの取得に失敗しました"
+msgstr "Не ўдалося атрымаць спіс каталогаў"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1289
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1499
 msgid "Please wait..."
-msgstr "お待ち下さい..."
+msgstr "Калі ласка, пачакайце..."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1396
 msgid "Error"
-msgstr "エラー"
+msgstr "Памылка"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1397
 msgid "No server or username is set."
-msgstr "サーバーまたはユーザー名が設定されていません。"
+msgstr "Не ўведзены сервер альбо імя карыстальніка."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1398
 msgid ""
 "The folder list cannot be retrieved until a server, username, and probably "
 "password are set.  Also be sure to check any security settings in the "
 "Advanced dialog."
-msgstr "サーバー、ユーザー名、それとおそらくパスワードがセットされない限り、フォルダーリストは取得できません。高度な設定用のダイアログでセキュリティの設定を確認するのも忘れないで下さい。"
+msgstr "Спіс каталогаў немагчыма атрымаць пакуль не будуць ўведзены імя карыстальніка і пароль. Таксама праверце налады бяспекі ў дыялогу «Дадаткова...»."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1403
 msgid "Set New Mail Folders"
-msgstr "新規メールフォルダーをセットする"
+msgstr "Прызначыць новыя паштовыя каталогі"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1417
 msgid "New Mail Folders"
-msgstr "新規メールフォルダー"
+msgstr "Новыя паштовыя каталогі"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1583
 msgid "Advanced IMAP Options"
-msgstr "高度な IMAP オプション"
+msgstr "Дадатковыя параметры IMAP"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1594
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:757
 msgid "Connection"
-msgstr "接続"
+msgstr "Злучэнне"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1603
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:766
 msgid "Use unsecured connection"
-msgstr "安全ではない接続を利用する"
+msgstr "Выкарыстоўваць неабароненае злучэнне"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1604
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:767
 msgid "Use SSL/TLS on alternate port"
-msgstr "別のポートで SSL/TLS を利用する"
+msgstr "Выкарыстоўваць SSL/TLS на альтэрнатыўным порце"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1605
 msgid "Use SSL/TLS via STARTTLS"
-msgstr "STARTTLS 経由で SSL/TLS を利用する"
+msgstr "Выкарыстоўваць SSL/TLS праз STARTTLS"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1621
 msgid "Use non-standard IMAP _port:"
-msgstr "非標準の IMAP ポートを利用する(_P):"
+msgstr "Выкарыстоўваць нестандартны порт IMAP:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1651
 msgid "Folders"
-msgstr "フォルダー"
+msgstr "Каталогі"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1659
 msgid "IMAP server _directory:"
-msgstr "IMAP サーバーフォルダー(_D):"
+msgstr "_Каталог сервера IMAP:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1689
 msgid "IMAP Server"
-msgstr "IMAP サーバー"
+msgstr "Сервер IMAP"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1703
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:843
 msgid "_Mail server:"
-msgstr "メールサーバー(_M):"
+msgstr "_Паштовы сервер:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1764
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:904
 msgid "_Advanced..."
-msgstr "高度な設定(_A)..."
+msgstr "_Дадаткова..."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1771
 msgid "New mail _folders..."
-msgstr "新規メールフォルダー(_F)..."
+msgstr "_Новыя паштовыя каталогі..."
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1960
 msgid "Remote IMAP Mailbox"
-msgstr "リモート IMAP メールボックス"
+msgstr "Адлеглая паштовая скрыня IMAP"
 
 #: ../libmailwatch-core/mailwatch-mailbox-imap.c:1961
 msgid ""
 "The IMAP plugin can connect to a remote mail server that supports the IMAP "
 "protocol, optionally using SSL for link protection."
-msgstr "IMAP プラグインは、IMAP プロトコルに対応しているリモートメールサーバーに接続します。リンクを保護するため任意で SSL を利用します。"
+msgstr "Убудова IMAP можа злучацца з адлеглым паштовым серверам, які падтрымлівае пратакол IMAP, дадаткова можна выкарыстоўваць SSL."
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:93
 #: ../libmailwatch-core/mailwatch-mailbox-mbox.c:95
@@ -206,97 +207,97 @@ msgstr "IMAP プラグインは、IMAP プロトコルに対応しているリ�
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:403
 #, c-format
 msgid "Failed to get status of file %s: %s"
-msgstr "ファイル %s のステータス取得に失敗しました: %s"
+msgstr "Немагчыма атрымаць статус файла %s: %s"
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:102
 #, c-format
 msgid "%s is not a directory. Is %s really a valid maildir?"
-msgstr "%s はフォルダーではありません。%s は本当に適切な maildir ですか?"
+msgstr "%s не з'яўляецца каталогам. %s правільны maildir?"
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:335
 msgid "Maildir _Path:"
-msgstr "Maildir のパス(_P):"
+msgstr "_Шлях да каталога maildir:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:340
 msgid "Select Maildir Folder"
-msgstr "Maildir フォルダーを選択する"
+msgstr "Абраць каталог maildir"
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:358
 #: ../libmailwatch-core/mailwatch-mailbox-mbox.c:395
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:590
 msgid "_Interval:"
-msgstr "間隔(_I):"
+msgstr "_Інтэрвал:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:450
 msgid "Local Maildir Spool"
-msgstr "ローカル Maildir スプール"
+msgstr "Лакальны каталог пошты"
 
 #: ../libmailwatch-core/mailwatch-mailbox-maildir.c:451
 msgid ""
 "The Maildir plugin can watch a local maildir-style mail spool for new "
 "messages."
-msgstr "Maildir プラグインは、Maildir 形式のローカルメールスプールの新着メッセージを確認します。"
+msgstr "Убудова Maildir сочыць за наяўнасцю новых лістоў у лакальных каталогах maildir."
 
 #: ../libmailwatch-core/mailwatch-mailbox-mbox.c:371
 msgid "Mbox _Filename:"
-msgstr "mbox ファイル名(_F):"
+msgstr "Назва _файла mbox:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-mbox.c:377
 msgid "Select mbox file"
-msgstr "mbox ファイルを選択する"
+msgstr "Абраць файл mbox"
 
 #: ../libmailwatch-core/mailwatch-mailbox-mbox.c:476
 msgid "Local Mbox spool"
-msgstr "ローカル mbox スプール"
+msgstr "Лакальны каталог Mbox"
 
 #: ../libmailwatch-core/mailwatch-mailbox-mbox.c:477
 msgid "Mbox plugin watches a local mbox-type mail spool for new messages."
-msgstr "mbox プラグインは、mbox タイプのローカルメールスプールの新着メッセージを確認します。"
+msgstr "Убудова Mbox сочыць за наяўнасцю новых лістоў у лакальных mbox-каталогах."
 
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:241
 #, c-format
 msgid "Malformed line %s in %s ignored."
-msgstr "%2$s のおかしな行 %1$s が無視されました。"
+msgstr "Хібны радок %s у %s мінуты."
 
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:581
 msgid ""
 "The configuration of this plugin is read from\n"
 "the default mh maildir profile file ~/.mh_profile"
-msgstr "このプラグインの設定は標準の MH メールフォルダーの\nプロファイルファイル ~/.mh_profile から読まれます"
+msgstr "Канфігурацыя гэтай убудовы чытаецца з \nпрадвызначанага файла профілю ~/.mh_profile"
 
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:683
 msgid "Local MH mail folder"
-msgstr "ローカル MH メールフォルダー"
+msgstr "Лакальны каталог пошты MH"
 
 #: ../libmailwatch-core/mailwatch-mailbox-mh.c:684
 msgid "MH plugin watches local MH folders for new mail"
-msgstr "MH プラグインは、ローカル MH フォルダーの新着メッセージを確認します。"
+msgstr "Убудова MH сочыць за наяўнасцю новай пошты ў каталозе MH"
 
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:746
 msgid "Advanced POP3 Options"
-msgstr "高度な POP3 オプション"
+msgstr "Пашыраныя параметры POP3"
 
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:768
 msgid "Use SSL/TLS via STLS"
-msgstr "STLS 経由で SSL/TLS を利用する"
+msgstr "Выкарыстоўваць SSL/TLS праз STLS"
 
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:784
 msgid "Use non-standard POP3 _port:"
-msgstr "非標準の POP3 ポートを利用する(_P):"
+msgstr "Выкарыстоўваць нестандартны _порт POP3:"
 
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:829
 msgid "POP3 Server"
-msgstr "POP3 サーバー"
+msgstr "Сервер POP3"
 
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:1037
 msgid "Remote POP3 Mailbox"
-msgstr "リモート POP3 メールボックス"
+msgstr "Адлеглая паштовая скрыня POP3"
 
 #: ../libmailwatch-core/mailwatch-mailbox-pop3.c:1038
 msgid ""
 "The POP3 plugin can connect to a remote mail server that supports the POP3 "
 "protocol, optionally using SSL for link protection."
-msgstr "POP3 プラグインは、POP3 プロトコルに対応しているリモートメールサーバーに接続します。リンクを保護するため任意で SSL を利用します。"
+msgstr "Убудова POP3 можа злучацца з адлеглым паштовым серверам, які падтрымлівае пратакол POP3, дадаткова можна выкарыстоўваць SSL."
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:222
 #: ../libmailwatch-core/mailwatch-net-conn.c:267
@@ -308,63 +309,63 @@ msgstr "POP3 プラグインは、POP3 プロトコルに対応しているリ�
 #: ../libmailwatch-core/mailwatch-net-conn.c:850
 #, c-format
 msgid "Operation aborted"
-msgstr "操作が中止されました"
+msgstr "Аперацыя скасавана"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:498
 #, c-format
 msgid "Could not find host \"%s\": %s"
-msgstr "ホスト \"%s\" を見つけることができませんでした: %s"
+msgstr "Не атрымалася знайсці хост «%s»: %s"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:582
 #, c-format
 msgid "Failed to connect to server \"%s\": %s"
-msgstr "サーバー \"%s\" への接続に失敗しました: %s"
+msgstr "Не атрымалася злучыцца з серверам «%s»: %s"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:642
 #, c-format
 msgid "Not compiled with SSL/TLS support"
-msgstr "SSL/TLS サポートでコンパイルされていません"
+msgstr "Скампілявана без падтрымкі SSL/TLS"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:698
 #, c-format
 msgid "Failed to send encrypted data: %s"
-msgstr "暗号化されたデータの送信に失敗しました: %s"
+msgstr "Не атрымалася адправіць зашыфраваныя даныя: %s"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:731
 #, c-format
 msgid "Failed to send data: %s"
-msgstr "データの送信に失敗しました: %s"
+msgstr "Не атрымалася адправіць даныя: %s"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:827
 #, c-format
 msgid "Failed to receive encrypted data: %s"
-msgstr "暗号化されたデータの受信に失敗しました: %s"
+msgstr "Не атрымалася прыняць зашыфраваныя даныя: %s"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:857
 #, c-format
 msgid "Failed to receive data: %s"
-msgstr "データの受信に失敗しました: %s"
+msgstr "Не атрымалася прыняць даныя: %s"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:955
 #, c-format
 msgid "Canceling read: read too many bytes without a newline"
-msgstr "読込みをキャンセル中: 改行のない多すぎるサイズを読み込みました"
+msgstr "Чытанне скасавана: прачытана зашмат байтаў без пераносу радка"
 
 #: ../libmailwatch-core/mailwatch-net-conn.c:965
 #, c-format
 msgid "Buffer is not large enough to hold a full line (%s < %d)"
-msgstr "バッファーはすべての行を保持できるほど大きくありません (%s < %d)"
+msgstr "Памеру буфера недастаткова для ўсяго радка (%s < %d)"
 
 #: ../libmailwatch-core/mailwatch.c:122
 msgid ""
 "xfce4-mailwatch-plugin: Unable to initialise GThread support.  This is "
 "likely a problem with your GLib install."
-msgstr "xfce4-mailwatch-plugin: GThread サポートを初期化できません。GLib のインストールに問題があるようです。"
+msgstr "xfce4-mailwatch-plugin: не атрымалася ўключыць падтрымку Gthread. Хутчэй за ўсё,  Glib была няправільна ўсталявана."
 
 #: ../libmailwatch-core/mailwatch.c:337 ../libmailwatch-core/mailwatch.c:338
 #, c-format
 msgid "Unable to write config file '%s'"
-msgstr "設定ファイル '%s' に書き出せません"
+msgstr "Не атрымалася запісаць файл канфігурацыі «%s»"
 
 #: ../libmailwatch-core/mailwatch.c:402 ../libmailwatch-core/mailwatch.c:404
 #, c-format
@@ -372,194 +373,197 @@ msgid ""
 "Unable to set permissions on config file '%s'.  If this file contains "
 "passwords or other sensitive information, it may be readable by others on "
 "your system."
-msgstr "設定ファイル '%s' のアクセス権を設定できません。このファイルがパスワードや他の機密情報を含んでいる場合、あなたと同じシステムを使う他の人達に見られてしまうかもしれません。"
+msgstr "Не атрымалася задаць правы доступу для файла канфігурацыі «%s».Калі ў гэтым файле ёсць паролі і іншая важная інфармацыя, то яе могуць прачытаць іншыя карыстальнікі."
 
 #: ../libmailwatch-core/mailwatch.c:624
 msgid "This mailbox type does not require any configuration settings."
-msgstr "このタイプのメールボックスはいずれの設定も必要ありません。"
+msgstr "Гэты тып паштовай скрыні непатрэбна дадаткова наладжваць."
 
 #: ../libmailwatch-core/mailwatch.c:651
 msgid "Mailbox _Name:"
-msgstr "メールボックスの名前(_N):"
+msgstr "_Назва паштовай скрыні:"
 
 #: ../libmailwatch-core/mailwatch.c:669
 msgid "Mailwatch"
-msgstr "メールウォッチ"
+msgstr "Праверка пошты"
 
 #: ../libmailwatch-core/mailwatch.c:670
 msgid "Mailbox name required."
-msgstr "メールボックスの名前が必要です。"
+msgstr "Патрабуецца назва паштовай скрыні."
 
 #: ../libmailwatch-core/mailwatch.c:671
 msgid "Please enter a name for the mailbox."
-msgstr "メールボックスの名前を入力して下さい。"
+msgstr "Калі ласка, ўвядзіце тып паштовай скрыні."
 
 #: ../libmailwatch-core/mailwatch.c:712
 #, c-format
 msgid "Edit Mailbox: %s"
-msgstr "メールボックスの編集: %s"
+msgstr "Параметры паштовай скрыні: %s"
 
 #: ../libmailwatch-core/mailwatch.c:771
 msgid "Select Mailbox Type"
-msgstr "メールボックスの選択"
+msgstr "Абраць тып паштовай скрыні"
 
 #: ../libmailwatch-core/mailwatch.c:781
 msgid "Select a mailbox type.  A description of the type will appear below."
-msgstr "タイプを選択して下さい。説明は下に表示されます。"
+msgstr "Абярыце тып паштовай скрыні. Апісанне гэтага тыпу будзе ніжэй."
 
 #: ../libmailwatch-core/mailwatch.c:835
 msgid "Add New Mailbox"
-msgstr "新規メールボックスの追加"
+msgstr "Дадаць новую паштовую скрыню"
 
 #: ../libmailwatch-core/mailwatch.c:895
 msgid "Remove Mailbox"
-msgstr "メールボックスの削除"
+msgstr "Выдаліць паштовую скрыню"
 
 #: ../libmailwatch-core/mailwatch.c:896
 msgid "Are you sure?"
-msgstr "よろしいですか?"
+msgstr "Сапраўды?"
 
 #: ../libmailwatch-core/mailwatch.c:897
 msgid "Removing a mailbox will discard all settings, and cannot be undone."
-msgstr "メールボックスを削除するとすべての設定が破棄され、元に戻せません。"
+msgstr "Калі вы выдаліце паштовую скрыню, то выдаляцца таксама ўсе яе налады. Аднавіць іх будзе немагчыма."
 
 #: ../libmailwatch-core/mailwatch.c:962
 msgid "Mailboxes"
-msgstr "メールボックス"
+msgstr "Паштовыя скрыні"
 
 #: ../panel-plugin/mailwatch-plugin.c:151
 #: ../panel-plugin/mailwatch-plugin.c:486
 msgid "No new mail"
-msgstr "新着メールはありません"
+msgstr "Новыя лісты адсутнічаюць"
 
 #: ../panel-plugin/mailwatch-plugin.c:172
 #, c-format
 msgid "You have %d new message:"
 msgid_plural "You have %d new messages:"
-msgstr[0] "%d 件の新着メッセージがあります:"
+msgstr[0] "У вас %d новы ліст:"
+msgstr[1] "У вас %d новыя лісты:"
+msgstr[2] "У вас %d новых лістоў:"
+msgstr[3] "У вас %d новых лістоў:"
 
 #: ../panel-plugin/mailwatch-plugin.c:182
 #, c-format
 msgid "tells how many new messages in each mailbox|    %d in %s"
-msgstr " %2$s に %1$d 通"
+msgstr "апавяшчае колькі новых лістоў знаходзіцца ў вашай паштовай скрыні। %d  у %s"
 
 #: ../panel-plugin/mailwatch-plugin.c:469
 msgid "Xfce Mailwatch"
-msgstr "Xfce メールウォッチ"
+msgstr "Праверка пошты Xfce"
 
 #: ../panel-plugin/mailwatch-plugin.c:470
 msgid "The mailwatch applet cannot be added to the panel."
-msgstr "このメールウォッチアプレットはパネルに追加できません。"
+msgstr "Не атрымалася дадаць на панэль аплет праверкі пошты."
 
 #: ../panel-plugin/mailwatch-plugin.c:471
 msgid ""
 "It is possible that your version of GLib does not have threads support."
-msgstr "あなたの環境の GLib のバージョンはスレッドをサポートしていないためできません。"
+msgstr "Магчыма, вашая бібліятэка GLib не падтрымлівае гэта."
 
 #: ../panel-plugin/mailwatch-plugin.c:706
 msgid "Mailwatch log"
-msgstr "メールウォッチログ"
+msgstr "Лог праверкі пошты"
 
 #: ../panel-plugin/mailwatch-plugin.c:764
 msgid "Log _lines:"
-msgstr "ログの行数(_L):"
+msgstr "Радкоў у лозе:"
 
 #: ../panel-plugin/mailwatch-plugin.c:778
 msgid "Show log _status in icon"
-msgstr "アイコンでログステータスを表示(_S)"
+msgstr "Паказваць статус лога на значку"
 
 #: ../panel-plugin/mailwatch-plugin.c:841
 msgid "Select Icon"
-msgstr "アイコンを選択して下さい"
+msgstr "Абраць значок"
 
 #: ../panel-plugin/mailwatch-plugin.c:873
 #: ../panel-plugin/mailwatch-plugin.c:1148
 msgid "_Normal"
-msgstr "通常(_N)"
+msgstr "_Звычайны"
 
 #: ../panel-plugin/mailwatch-plugin.c:878
 msgid "Ne_w mail"
-msgstr "新着メール(_W)"
+msgstr "Но_вая пошта"
 
 #: ../panel-plugin/mailwatch-plugin.c:927
 msgid "Failed to open web browser for online documentation"
-msgstr "オンラインドキュメントのためにウェブブラウザー開くことに失敗しました"
+msgstr "Не атрымалася адкрыць вэб-браўзер для прагляду сеціўнай дакументацыі"
 
 #: ../panel-plugin/mailwatch-plugin.c:975
 msgid "Online Documentation"
-msgstr "オンラインドキュメント"
+msgstr "Сеціўная дакументацыя"
 
 #: ../panel-plugin/mailwatch-plugin.c:977
 msgid "Do you want to read the manual online?"
-msgstr "オンラインでマニュアルを閲覧しますか?"
+msgstr "Хочаце пачытаць дапаможнік у сеціве?"
 
 #: ../panel-plugin/mailwatch-plugin.c:978
 msgid ""
 "You will be redirected to the documentation website where the help pages are"
 " maintained."
-msgstr "ヘルプページがメンテナンスされている場合ドキュメントウェブサイトにリダイレクトされます。"
+msgstr "Вас перанакіруюць на вэб-сайт дакументацыі, дзе знаходзяцца старонкі даведкі."
 
 #: ../panel-plugin/mailwatch-plugin.c:982
 msgid "_Read Online"
-msgstr "オンラインで読む(_R)"
+msgstr "_Чытаць у сеціве"
 
 #: ../panel-plugin/mailwatch-plugin.c:993
 msgid "_Always go directly to the online documentation"
-msgstr "常にオンラインドキュメントを閲覧する(_A)"
+msgstr "_Заўсёды звяртацца да сеціўнай дакументацыі"
 
 #: ../panel-plugin/mailwatch-plugin.c:1032
 #: ../panel-plugin/mailwatch.desktop.in.h:1
 msgid "Mail Watcher"
-msgstr "メールウォッチャー"
+msgstr "Праверка пошты"
 
 #: ../panel-plugin/mailwatch-plugin.c:1050
 msgid "_View Log..."
-msgstr "ログを表示(_V)..."
+msgstr "_Лог..."
 
 #: ../panel-plugin/mailwatch-plugin.c:1074
 msgid "External Programs"
-msgstr "外部プログラム"
+msgstr "Вонкавыя праграмы"
 
 #. External programs - Labels.
 #: ../panel-plugin/mailwatch-plugin.c:1080
 msgid "Run _on click:"
-msgstr "クリックで実行(_O):"
+msgstr "Запускаць па _пстрычцы:"
 
 #: ../panel-plugin/mailwatch-plugin.c:1086
 msgid "Run on first new _message:"
-msgstr "最初の新着メッセージが届いた時に実行(_M):"
+msgstr "Запускаць пры _першым новым лісце:"
 
 #: ../panel-plugin/mailwatch-plugin.c:1093
 msgid "Run on _each change of new message count:"
-msgstr "新着メッセージ数が更新される度に実行(_E):"
+msgstr "Запускаць пры наяўнасці _новых лістоў:"
 
 #. Icons.
 #: ../panel-plugin/mailwatch-plugin.c:1126
 msgid "Icons"
-msgstr "アイコン"
+msgstr "Значкі"
 
 #: ../panel-plugin/mailwatch-plugin.c:1165
 msgid "Ne_w Mail"
-msgstr "新着メール(_W)"
+msgstr "Но_вая пошта"
 
 #: ../panel-plugin/mailwatch-plugin.c:1226
 msgid "Xfce4 Mailwatch Plugin"
-msgstr "Xfce メールウォッチプラグイン"
+msgstr "Убудова праверкі пошты Xfce"
 
 #: ../panel-plugin/mailwatch-plugin.c:1229
 msgid "A featureful mail-checker applet for the Xfce Panel"
-msgstr "Xfce パネル向け多機能メールチェッカーアプレット"
+msgstr "Карысны аплет праверкі пошты для панэлі Xfce"
 
 #: ../panel-plugin/mailwatch-plugin.c:1231
 msgid ""
 "Copyright (c) 2005-2008 Brian Tarricone\n"
 "Copyright (c) 2005 Pasi Orovuo"
-msgstr "Copyright (c) 2005-2008 Brian Tarricone\nCopyright (c) 2005 Pasi Orovuo"
+msgstr "Copyright © 2005—2008 Brian Tarricone\nCopyright © 2005 Pasi Orovuo"
 
 #: ../panel-plugin/mailwatch-plugin.c:1304
 msgid "Update Now"
-msgstr "今すぐチェックする"
+msgstr "Абнавіць"
 
 #: ../panel-plugin/mailwatch.desktop.in.h:2
 msgid "Check mail from multiple mailboxes"
-msgstr "様々なタイプのメールボックスに届くメールをチェックします"
+msgstr "Праверка пошты з некалькіх паштовых скрыняў"
